@@ -11,7 +11,7 @@
             padding: 0;
         }
         .login {
-            /* background: url(./login_bg.jpg) no-repeat; */
+            background: url(./login_bg.jpg) no-repeat;
             position: fixed;
             top: 0;
             bottom: 0;
@@ -20,7 +20,7 @@
             display: -webkit-flex;
         }
         .leftpart {
-            background: url(./login_bg.jpg) no-repeat;
+            /* background: url(./login_bg.jpg) no-repeat; */
             position: fixed;
             top: 0;
             bottom: 0;
@@ -115,7 +115,7 @@ var pwd = document.getElementById("pwd");
 var btn=document.getElementById('login');
 btn.onclick=function start(){
     if(username.value =='admin' && pwd.value =='admin'){
-        var loginInfo = {
+        var loginData = {
             "loginname":$("#userName").val(),
             "password":$("#password").val()
         }

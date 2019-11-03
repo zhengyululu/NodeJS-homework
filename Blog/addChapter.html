@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            /* background: url(./bg.jpg) repeat; */
+            background: url(login_bg.jpg) repeat;
         }
         table {
             border-collapse: collapse;
@@ -159,7 +159,9 @@
                     <a href="##"  onclick="showList()">文章列表</a>
                 </li>
                 <li>
-                    <a href="##" onclick="addChapter()">添加文章</a>
+                    <!-- <a href="##" onclick="addChapter()">添加文章</a> -->
+                    <a href="##">添加文章</a>
+
                 </li>
             </ul>
         </div>
@@ -180,11 +182,28 @@
         window.location = "http://localhost:8083/listmanager"
     }
     $("#sub").click(function() {
-        $.post("http://localhost:8083/add", {"title": $("#title").val(), "content": $("#ct").html()}, function(data) {
-            // window.location = "http://localhost:8083/listmanager/"
+        $.post("http://localhost:8083/add", $("#title").val(), function(data) {
+            data={"title": $("#title").val()};
+            
             console.log(data);
+            window.location = "http://localhost:8083/listmanager";
         })
-        console.log($("#title").val());
+        
     })
+
+    // $("#sub").click(function() {
+    //     var title1=$("#title").val();
+    //     var content1=$("ct").val();
+    //     var urlData={title:title1,content:content1};
+    //     console.log("t:"+urlData.title);
+    //     console.log("c:"+urlData.content);
+
+    //     //此处的data对应boke.js中add函数的res.end()
+    //     $.post("http://localhost:8089/add", urlData.title, function(data) {
+    //         window.location = "http://localhost:8089/listmanager";
+    //         console.log(data)
+    //     })
+        
+    // })
 </script>
 </html>
