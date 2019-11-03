@@ -81,7 +81,7 @@ http.createServer(function(req,res){
     }
 
 }).listen(8083);
-console.log("server is listening 8089");
+console.log("server is listening 8083");
 var chapterList = [
     {
         "chapterId": 1,
