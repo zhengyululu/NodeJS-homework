@@ -11,16 +11,13 @@ router.post('/list', function(req, res, next) {
   var pwd=req.body.pwd;
   var username1=data.users[0].username;
   var pwd1=data.users[0].password;
-  console.log(username);
-  console.log(username1);
-  console.log(pwd);
-  console.log(pwd1);
+  req.setEncoding('utf-8');
   if(username==username1 && pwd==pwd1){
     res.render('list',{chapterList:data.chapterList});
   }
   else{
-    res.writeHead(200,{"Content-Type":"text/html;charset:utf-8"});
-    res.end('Username and password is wrong');
+    res.writeHead(200,{"Content-Type":"text/html;charset=utf-8"});
+    res.end('用户名密码错误');
   }
   // res.render('list', { title: 'Express' });
 });

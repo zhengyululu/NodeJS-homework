@@ -217,7 +217,7 @@ function showDetail(res){
 }
 // function uploadFile(req,res){
 //     var dataStr = '';//用来接收数据
-//     req.setEncoding('binary');
+    // req.setEncoding('binary');
 //     req.on("data",function(chunk){
 //         dataStr += chunk;
 //     })
